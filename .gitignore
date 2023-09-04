@@ -1,0 +1,33 @@
+# LaTeX specific
+*.aux
+*.bbl
+*.blg
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.bib
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.main.run.xml
+
+# Compiled output
+*.pdf
+
+# Temporary files
+.vscode/
+.idea/
+*.swp
+*.bak
+
+# Build output directory (if you have one)
+/output/
+
+# Ignore backup files
+*~
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
