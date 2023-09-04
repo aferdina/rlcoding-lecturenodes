@@ -11,7 +11,7 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
-*.main.run.xml
+*main.run.xml
 
 # Compiled output
 *.pdf
