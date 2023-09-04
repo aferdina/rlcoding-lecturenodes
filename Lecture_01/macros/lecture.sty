@@ -1,0 +1,107 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{macros/lecture}[2023/09/04 Custom styles for Beamer presentation]
+\mode<presentation>
+
+
+%% custom colors
+
+\RequirePackage{color}
+\definecolor{UMblue}{RGB}{4 47 86}
+\definecolor{WIMgreen}{RGB}{60 134 132}
+\definecolor{Purple}{HTML}{911146}
+
+%% necessary packages
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[german]{babel}
+
+
+\RequirePackage{amssymb, amsmath, amsthm,amsfonts}
+\RequirePackage{eulervm}
+\RequirePackage{mathtools}
+\RequirePackage{calc}
+
+\RequirePackage[citestyle = authoryear-comp, bibstyle = authoryear, firstinits=true, natbib = true, backend = bibtex]{biblatex}
+
+\RequirePackage{pgfplots}
+\pgfplotsset{trig format=rad, compat=1.10}
+\usepgfplotslibrary{fillbetween}
+
+\RequirePackage{tikz}
+\RequirePackage{tikz-qtree}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{cd}
+\usetikzlibrary{babel}
+
+\RequirePackage{graphicx}
+
+\RequirePackage{etoolbox}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{textcomp}
+\RequirePackage{gensymb}
+\RequirePackage{calc}
+\RequirePackage{dsfont}
+
+\usetikzlibrary{pgfplots.fillbetween}
+\RequirePackage{csquotes}
+
+
+%% custom commands
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{^{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\sigm}{\text{sigm}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\Tau}{\mathrm{T}}
+\newcommand*{\Cdot}{\raisebox{-0.25ex}{\scalebox{1.2}{$\cdot$}}}
+
+% %% custom environments
+
+\newtheorem{bem}{Bemerkung}[section]
+\newtheorem{korollar}{Korollar}[section]
+\newtheorem{durchf}{Durchf\"uhrung}[section]
+\newtheorem{vor}{Vorwort}[section]
+\newtheorem{bsp}{Beispiel}[section]
+\newtheorem{bew}{Beweis}[section]
+\newtheorem{reinf}{Reinforcement}[section]
+\newtheorem{naming}{Naming}[section]
+\newtheorem{rewrite}{Rewriting}[section]
+\newtheorem{pga}{Policy Gradient Algorithm}[section]
+\newtheorem{calc}{Rules of calculation}
+\newtheorem{parameter}{Parameter configuration}
+\newtheorem{rewardshaping}{Reward Shaping}
+\newtheorem{appandppo}{Function approximation and PPO}
+\newtheorem{mdp}{Markov Decision Problem}
+
+% %% math operators
+
+% \DeclareMathOperator*{\argmax}{argmax}
+
+% %% etool box
+% % \newtcolorbox{attention}{enhanced,arc=0mm,colback=red!2,colframe=red!95!black,leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{Bilder/warning.png}}; }}
+% % \newtcolorbox{question}{enhanced,arc=0mm,colback=red!2,colframe=red!95!black,leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{Bilder/question.png}}; }}
+% % \newtcolorbox{answer}{enhanced,arc=0mm,colback=blue!2,colframe=blue!95!black,leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{Bilder/answer.png}}; }}
