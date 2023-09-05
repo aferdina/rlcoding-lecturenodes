@@ -1,0 +1,39 @@
+\section{Reminder: Multiarmed Bandits}
+\begin{frame}
+    \begin{ldef}{Multiarmed Bandit Model}
+            Suppose $\mathcal A$ is an index-set and $\nu = \{P_a\}_{a \in \mathcal A}$ is a family of real-valued distributions. 
+            \begin{itemize}
+                \item The set $\nu$ is called a stochastic bandit model. In these lectures we will always assume $\mathcal A=\{a_1,...,a_K\}$ is finite, $K$ is the number of arms.
+                \item The action value (or $Q$-value) of an arm is defined by it's expectation $Q_a:=\int_\R x \, P_{a}(dx)$. A best arm, usually denoted by $a_*$, is an arm with highest $Q$-value, i.e.         
+                 $$Q_{a^*}=\text{argmax}_{a\in \mathcal A} Q_a.$$ Typically one abbreviates $Q_*$ for the largest action value $Q_a$ and if there are several optimal arms the argmax choses any of them.
+            \end{itemize}
+\end{ldef}
+\end{frame}
+
+\begin{frame}
+    \begin{ldef}{MAB:Learning Strategy}
+            Suppose $\mathcal A$ is an index-set and $\nu = \{P_a\}_{a \in \mathcal A}$ is a family of real-valued distributions. 
+            \begin{itemize}
+                \item A learning strategy for $n$ rounds ($n=+\infty$ is allowed) consists of
+                \begin{itemize}
+                    \item an initial distribution $\pi_1$ on $\mathcal A$,
+                    \item a sequence $(\pi_t)_{t=2,\dots,n}$ of kernels on $\Omega_{t-1}\times \mathcal A$,
+                \end{itemize}
+                where $\Omega_t$ denotes all trajectories $(a_1,x_1,a_2,x_2,\dots, a_{t}, x_t)\in (\mathcal A\times \R)^t$. We will write the kernels in reverse ordering of the arguments
+                \begin{align*}
+                    \pi_t\big(\cdot\,;\, a_1,x_1,a_2,x_2,\dots, a_{t}, x_t\big)
+                \end{align*}
+                with the meaning that $\pi_t\big(\{a\}\,;\, a_1,x_1,a_2,x_2,\dots, a_{t}, x_t\big)$ is the probability arm $a$ is chosen at time $t$ if the past rounds resulted in actions/rewards $a_1,x_1,a_2,x_2,..., a_{t}, x_t$.
+            \end{itemize}
+\end{ldef}
+\end{frame}
+\begin{frame}
+    \begin{ltarget}{Problem Formulation and Target}
+        \begin{itemize}
+            \item Implementing a generic Multiarmed bandit model.
+            \item Implementing a generic learning strategy for Multiarmed Bandit Models.
+            \item Implementing metrics to evaluate the performance of a learning strategy.
+            \item Implementing a training framework for Multiarmed Bandit Models.
+        \end{itemize}
+\end{ltarget}
+\end{frame}

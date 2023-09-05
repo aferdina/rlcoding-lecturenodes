@@ -103,4 +103,8 @@
 % %% etool box
 \newtcolorbox{attention}{enhanced,arc=0mm,colback=red!2,colframe=red!95!black,leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{images/warning.png}}; }}
 % % \newtcolorbox{question}{enhanced,arc=0mm,colback=red!2,colframe=red!95!black,leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{Bilder/question.png}}; }}
-\newtcolorbox{content}{enhanced,arc=0mm,colback=blue!2,colframe=WIMgreen!95!black,leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{images/content.png}}; }}
+\newtcolorbox{content}[2][]{enhanced,arc=0mm,colback=blue!2,colframe=WIMgreen!95!black,title=#2,#1,fonttitle=\bfseries, colbacktitle=white,coltitle=black,attach boxed title to top center={yshift=-2mm},leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{images/content.png}}; }}
+
+\newtcolorbox{ldef}[2][]{breakable,enhanced,arc=0mm,colback=blue!5,colframe=blue!50!green,title=#2,#1,fonttitle=\bfseries, attach boxed title to top center={yshift=-2mm}, colbacktitle=white,coltitle=black, leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{images/content.png}}; }}
+
+\newtcolorbox{ltarget}[2][]{breakable,enhanced,arc=0mm,colback=blue!5,colframe=blue,title=#2,#1,fonttitle=\bfseries, attach boxed title to top center={yshift=-2mm}, colbacktitle=white,coltitle=black, leftrule=10mm,overlay={\node[anchor=north west,outer sep=2pt] at (frame.north west) {\includegraphics[width=6mm]{images/target.png}}; }}
