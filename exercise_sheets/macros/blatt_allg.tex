@@ -1,0 +1,169 @@
+\def\vorlesung{Coding Reinforcement Learning}
+%\def\vorlesung{Math.\ Einf.\ Sachversicherung}
+\def\assistent{A. Ferdinand}
+\def\assistentEmail{andre.ferdinand@uni-mannheim.de}
+\def\semester{HWS 2023}
+\def\uni{Universit\"at Mannheim}
+
+\usepackage{amsthm,amsmath,amssymb}
+\usepackage{listings}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsthm,amsmath,amssymb}
+\usepackage{hyperref}
+
+\usepackage{bbm}
+\usepackage{upgreek}
+\usepackage{url}
+\usepackage[utf8]{inputenc} 
+\usepackage[strings]{underscore}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{csquotes}
+ \usepackage{multirow}
+ \usepackage{makecell}
+
+\def\TITEL#1{
+\gdef\Blatt{#1}
+{\small  
+Prof.~S. Weißmann/ L. Doering \  \hfill \vorlesung  \hfill \textbf{Herausgabe:} \herausdatum\\
+\assistent \hfill \uni \ \semester \hfill \textbf{Vergleich:} \vergleichdatum \\
+}
+\rule{\linewidth}{1pt}
+\begin{center}
+  {\Large\bf Blatt #1}\\
+\end{center}
+
+\bigskip
+}
+
+\def\Abgabe#1#2{
+\vfil
+\def\Relax{\relax}\def\schriftl{#1\relax}
+\ifx\schriftl\Relax\else\bf Abgabe der schriftlichen Aufgaben: #1\\\fi
+                            \bf Besprechung aller Aufgaben: #2
+        }
+
+%\input /home/schlather/Vorlesung/allg/ma/title.tex
+%\input title.tex
+\frenchspacing
+\allowdisplaybreaks
+\textwidth16cm
+\topmargin-1cm
+\textheight27cm
+\voffset-2cm
+\hoffset-1cm
+\parindent0cm
+\sloppypar
+\small\normalsize %sonst funktioniert veraenderter Zeilenabstand nicht
+\baselineskip12pt %normaler Zeilenabstand...
+\renewcommand{\baselinestretch}{1} %...um 1.0 vergroessert
+%Allgemeine Neubefehle
+\pagestyle{plain}
+
+\long\def\personnel#1{{\sc #1}}
+\long\def\personnel#1{}
+
+%\nosol%
+%\solnice
+
+\newif\ifloes
+\loesfalse
+%\loestrue
+
+\newcounter{aufgabe}
+\setcounter{aufgabe}{0}
+%\def\Aufgabe{\ifnum\value{aufgabe}>0\bigskip\fi\addtocounter{aufgabe}1{\bf Aufgabe \arabic{abschnitt}.\arabic{aufgabe}}\\}
+
+
+\def\Aufgabe{\ifnum\value{aufgabe}>0\bigskip\fi\addtocounter{aufgabe}1{\bf
+    Aufgabe \arabic{abschnitt}.\arabic{aufgabe}}\\\rm}%
+\def\Aufgabe{\ifnum\value{aufgabe}>0\bigskip\fi\addtocounter{aufgabe}1{\bf
+    Aufgabe \arabic{aufgabe}}\\\rm}%
+\def\VorlesungsAufgabe#1{\ifnum\value{aufgabe}>0\bigskip\fi\addtocounter{aufgabe}1{\bf
+    Aufgabe \arabic{aufgabe} (Vorlesung, #1)}\\\rm}%
+\def\AufgabeX#1{\ifnum\value{aufgabe}>0\bigskip\fi\addtocounter{aufgabe}1{\bf
+    Aufgabe \arabic{aufgabe} (schriftl.;%
+    \def\x{1}%
+    \def\y{#1}%
+    \ifx\x\y1 Punkt\else#1 Punkte\fi%
+) }\\\rm}
+\def\Aufgabe#1{\ifnum\value{aufgabe}>0\bigskip\fi\addtocounter{aufgabe}1{\bf
+    Aufgabe \arabic{aufgabe} (%
+    \def\x{1}%
+    \def\y{#1}%
+    \ifx\x\y1 Punkt\else#1 Punkte\fi%
+    ;  schriftlich%
+) }\\\rm}
+\def\AufgabeV#1{\ifnum\value{aufgabe}>0\bigskip\fi\addtocounter{aufgabe}1{\bf
+    Aufgabe \arabic{aufgabe} (%
+    #1%
+    Votieraufgabe%
+) }\\\rm}
+
+
+\newcounter{abschnitt}
+\setcounter{abschnitt}{0}
+\def\Abschnitt#1{\bigskip\bigskip\begin{center}\addtocounter{abschnitt}1\setcounter{aufgabe}{0}\large Abschnitt \arabic{abschnitt}: Einstieg\end{center}}
+
+\long\def\Hausaufgabe{%\bigskip\begin{center}\Large\bf
+                      %Hausaufgabe\end{center}
+
+  \vfil
+  {\bf Abgabe der schriftlichen Aufgabe(n) per Mail an \\ \assistentEmail\\  mit
+    einem einzigen lauff\"ahigen C-Skript im Anhang, benannt nach Schema
+    max.mustermann.Blatt\Blatt.c .}
+  \bigskip
+ \setcounter{aufgabe}{0}
+ \gdef\Aufgabe{\ifnum\value{aufgabe}>0\bigskip\fi\addtocounter{aufgabe}1{\bf Aufgabe H.\arabic{aufgabe}}\\}
+}
+
+
+
+\def\makeatletter{\catcode`\@=11\relax}
+\def\makeatother{\catcode`\@=12\relax}
+\makeatletter
+
+\def\Label#1{
+  \immediate\write\@auxout{\gdef\string\Ref#1{Blatt \Blatt,
+      Aufgabe \arabic{aufgabe}}}
+}
+
+% Definition of  \fverbatim{filename}
+\newread\ps@stream\newif\ifnot@eof
+\newwrite\@unused
+\def\xps@typeout#1{{\let\protect\string\immediate\write\@unused{#1}}}
+\newif\if@num\@numfalse\countdef\num@z=230\dimendef\num@b=230\dimendef\@breite=231
+\long\def\xepsf@aux#1:.:{\if@num\hbox to \num@b{\hfill\numstyle\the\num@z\vspaces\hss}\advance\num@z by 1\fi\hbox to \@breite{\vstyle #1\hss}\\}
+
+\def\numstyle{\it}
+\def\vstyle{\tt}
+\def\numbering{\@numtrue}
+\def\vspaces{\/\ \ }
+\newbox\num@box
+\def\fverbatim#1{\mbox{}\openin\ps@stream=#1
+\ifeof\ps@stream\xps@typeout{Fehler, Datei #1 nicht gefunden}\else
+   {\not@eoftrue \chardef\other=12
+    \def\do##1{\catcode`##1=\other}\dospecials \catcode`\ =10
+    \if@num\num@z1
+       \loop
+          {\obeyspaces\read\ps@stream to \epsf@tmp}\ifeof\ps@stream\not@eoffalse\fi
+          \advance\num@z by 1
+       \ifnot@eof\repeat
+       \closein\ps@stream
+       \setbox\num@box=\hbox{\numstyle\the\num@z\vspaces}
+       \num@b\wd\num@box\num@z1
+       \@breite\textwidth\advance\@breite by -\num@b
+    \fi\not@eoftrue\openin\ps@stream=#1
+    \loop
+       {\obeyspaces
+        \read\ps@stream to \epsf@tmp\global\let\epsf@fileline\epsf@tmp}
+       \ifeof\ps@stream\not@eoffalse\else
+       \expandafter\xepsf@aux\epsf@fileline:.:%
+       \fi
+   \ifnot@eof\repeat
+   }\closein\ps@stream\fi}%
+
+
+
+\makeatother

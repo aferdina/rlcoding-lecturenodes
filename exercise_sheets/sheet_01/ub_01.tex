@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt]{report}
+\input ../macros/blatt_allg.tex
+\makeatletter
+\makeatother
+
+\def\herausdatum{06.09.23}
+\def\vergleichdatum{TBA}
+
+
+% \loestrue
+
+\def\diag{{\rm diag}}
+
+\def\VorlesungsAufgabe#1{\Aufgabe}
+\pagestyle{empty}
+
+
+\begin{document}\TITEL{9} 
+
+
+\AufgabeV{Bandit Model; }
+In the first task, a bandit model is to be implemented. Particular attention should be paid to taking into account the solid principles from the lecture. For a first approach, it is often useful to implement concrete examples in order to then create a generalisation.  
+\begin{enumerate}
+	\item Implement the Gaussian Bandit from the lecture. It should be possible for the class to have any number of arms and the expected values of the arms and the variance can be passed as parameters.
+	\item Implement the Bernoulli Bandit from the lecture. As in the previous section, the class should have any number of arms and the parameters of the individual arms can be changed as desired.
+	\item Based on the solid principles from the lecture. How to create abstract classes. Which components of the two previous bandits are the same, which are different?
+\end{enumerate}
+
+\AufgabeV{Learning Rules; }
+Analogous to the previous task, an object is to be created for the learning rule of the lecture. 
+The procedure is similar to the previous task. 
+\begin{enumerate}
+	\item Implement the Epsilon Greedy algorithm from the lecture. 
+	\item Implement the explore then commit algorithms from the lecture. 
+	\item Based on the solid principles from the lecture. How to implement an abstract object `learning rule`? Which components of the two previous bandits are the same, which are different?
+\end{enumerate}
+
+\end{document}
