@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{report}
+\input ../macros/blatt_allg.tex
+\makeatletter
+\makeatother
+
+\def\herausdatum{13.09.23}
+\def\vergleichdatum{TBA}
+
+
+% \loestrue
+
+\def\diag{{\rm diag}}
+
+\def\VorlesungsAufgabe#1{\Aufgabe}
+\pagestyle{empty}
+
+
+\begin{document}\TITEL{9} 
+
+
+\AufgabeV{Metrics for Multi Armed Bandit Models; }
+In the first exercise sheet, we developed multi-armed bandit models and algorithms to optimise them. In the following we will introduce metrics to test the different algorithms. Adapt the classes and methods from the first exercise sheet to calculate the following metrics. 
+\begin{enumerate}
+	\item Regret over time
+	\item Number of optimal actions over time
+	\item Average reward over time
+	\item Cumulative reward over time
+\end{enumerate}
+
+\AufgabeV{Run an Algorithm; }
+After defining metrics for multi-armed bandits, we want to apply them to our algorithms. Write a class or method to calculate the metrics of the previous task.
+
+
+\AufgabeV{Add Algorithms; }
+After defining metrics for multi-armed bandits, we want to apply them to our algorithms. Write a class or method to calculate the metrics of the previous task.
+Select and implement one of the following algorithms:
+\begin{itemize}
+    \item Upper Confidence Bound
+    \item Gradient Bandit
+    \item Simple Boltzmann Exploration
+    \item Boltzmann Exploration with Gumbel Trick
+    \item Exp3 
+    \item Thompson Sampling
+\end{itemize}
+\end{document}
