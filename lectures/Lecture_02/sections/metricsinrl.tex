@@ -1,0 +1,20 @@
+\section{Metrics for Multiarmed Bandits}
+
+\begin{frame}
+    \begin{ldef}{Regret}
+            Suppose $\nu$ is a bandit model and $(\pi_t)_{t=1,\dots,n}$ a learning strategy. Then the (cummulated) regret is defined by 
+            \begin{align*}
+                R_n(\pi):=nQ_*-\E\Big[\sum_{t=1}^n X_t\Big].
+            \end{align*}
+            The stochastic bandit problem consists in finding learning strategies that minimise the regret. If $\pi$ is clear from the context then we will shorten to $R_n$.
+    \end{ldef}
+\end{frame}
+\begin{frame}
+    \begin{ldef}{Failture Probability}
+        Suppose $\nu$ is a bandit model and $\pi$ a learning strategy. Then the probability the learner choses a suboptimal arm in round $t$, i.e.
+        \begin{align*}
+            \tau_t(\pi):=\mathbb{P}(Q_{A_t}\neq Q_*)
+        \end{align*}
+        is called the failure probability in round $t$.
+    \end{ldef}
+\end{frame}

@@ -1,0 +1,94 @@
+\section{Tecnical Setup}
+
+\begin{frame}{Technical Setup-Reminder}
+    \begin{content}{Multiarmed Bandits}
+        \begin{itemize}
+            \item pyenv
+            \item Visual Studio Code
+            \item poetry
+            \item github
+            \item git
+        \end{itemize}
+    \end{content}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{pyenv}
+        \begin{itemize}
+            \item \textbf{Pyenv} is a tool that allows you to easily switch between multiple versions of Python on a single system.
+            \item \textbf{Isolation of different Python versions:} Pyenv allows you to have multiple versions of Python installed on your system, and easily switch between them.
+            \item \textbf{Easy installation and management of Python versions:} Pyenv makes it easy to install and manage different versions of Python, and keeps them isolated from the system Python.
+            \item \textbf{Compatibility with other tools:} Pyenv is compatible with other Python tools such as pip, virtualenv, and pyenv-virtualenv. This allows you to easily manage dependencies for your projects and keep them isolated from each other.
+            \item \textbf{Shell Integration:} Pyenv also allows you to integrate with your shell, which makes it easy to switch between different versions of Python.
+        \end{itemize} 
+    \end{content}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{Visual Studio Code}
+        An IDE, or Integrated Development Environment, is a software application or platform that provides a comprehensive set of tools and features to help software developers create, test, and manage their code more efficiently. IDEs are designed to streamline the software development process by offering a unified and user-friendly interface for various tasks involved in software development. These tasks typically include:
+        \begin{itemize}
+            \item \textbf{Code Editing:} IDEs offer code editors with features such as syntax highlighting, code completion, and code formatting to make writing code easier and more error-free.
+            \item \textbf{Compilation/Interpretation:} IDEs often integrate with compilers, interpreters, or build tools to compile or run code and provide feedback on errors and warnings.
+        \end{itemize}
+    \end{content}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{Visual Studio Code}
+        \begin{itemize}
+            \item \textbf{Version Control:} Many IDEs come with built-in version control system integration, making it easier to manage changes to code through tools like Git.
+            \item \textbf{Project Management:} IDEs help organize code files and resources into projects, making it simpler to navigate and manage large codebases.
+            \item \textbf{Testing:} They may include tools for unit testing, integration testing, and test automation.
+            \item \textbf{Code Analysis:} Some IDEs offer code analysis and code quality tools that help developers maintain code consistency and adhere to coding standards
+        \end{itemize}
+    \end{content}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{Visual Studio Code}
+        \begin{itemize}
+            \item \textbf{Plugins and Extensions:} IDEs often support plugins or extensions that can be added to enhance functionality or support different programming languages and frameworks.
+            \item \textbf{Collaboration:} Some IDEs offer collaboration features, allowing multiple developers to work on the same project simultaneously or facilitating communication among team members.
+        \end{itemize}
+    \end{content}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{Poetry}
+        \textbf{Poetry} is a package management tool for Python that allows developers to easily manage and install dependencies for their projects. It can help to simplify the process of managing dependencies by handling things like creating virtual environments, installing packages, and managing package versions. Some benefits of using Poetry over other package management tools include:
+        \begin{enumerate}
+            \item It creates isolated virtual environments for your projects, which can help to prevent conflicts between dependencies.
+            \item It can automatically generate lock files which help to ensure that your project is always using the same version of dependencies, which can help to prevent issues caused by dependency updates.
+            \item It supports both Python 2 and 3 and you can specify the Python version you want to use.
+        \end{enumerate}
+    \end{content}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{Poetry: poetry add}
+        The \textit{poetry add} command in Poetry is used to add new dependencies to your Python project. It simplifies the process of specifying and managing project dependencies in your \textit{pyproject.toml} file. Here's how \textit{poetry add} works:
+        \begin{enumerate}
+            \item \textbf{Adding a Dependency:} When you run \textit{poetry add}, you provide the name of the dependency you want to add as an argument, along with an optional version constraint.
+            \item \textbf{Resolving Dependencies:} Poetry will analyze the specified dependency and its version constraint to determine the best compatible version.If you omit the version constraint, Poetry will choose the latest compatible version by default.
+            \item \textbf{Updating \textit{pyproject.toml}}: After resolving the dependency, Poetry will update your project's \textit{pyproject.toml} file to include the new dependency under the \textit{tool.poetry.dependencies} section.For example, running the above command will add or update a line like this in your \textit{pyproject.toml}.
+        \end{enumerate}
+    \end{content}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{git \& github}
+        \begin{enumerate}
+            \item \textbf{Git} is a version control system (VCS) that allows you to keep track of changes made to your code over time.
+            \item \textbf{Git} keeps a history of all your code versions, allowing you to revert to previous versions, collaborate with others, and work on multiple features simultaneously without conflicts.
+            \item \textbf{Git} is a command-line tool and can be used on any operating system.
+            \item \textbf{GitHub}, on the other hand, is a web-based platform built on top of Git that provides hosting for Git repositories, as well as additional features such as bug tracking, project management, and collaboration tools. 
+            \item \textbf{GitHub} provides a web interface for managing Git repositories, and it can be used to share code with others, collaborate on open-source projects, or host your own code for personal use.
+        \end{enumerate} 
+    \end{content}
+\end{frame}
+\begin{frame}
+    \begin{content}{git \& github}
+        In summary, Git is a tool for version control, and GitHub is a web-based platform for hosting and collaborating on Git repositories. While Git is a command-line tool that you can use locally, GitHub provides a web interface for managing and sharing your Git repositories, making it easier to collaborate with others.
+    \end{content}
+\end{frame}
