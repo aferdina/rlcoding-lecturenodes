@@ -1,0 +1,69 @@
+\section{git guidelines}
+
+\begin{frame}
+    \begin{content}{git overview}
+        \begin{itemize}
+            \item Distributed Version Control
+            \item Branching and Merging
+            \item History Visualization
+            \item Collaboration
+        \end{itemize}
+    \end{content}
+\end{frame}
+\begin{frame}
+    \frametitle{Branches Overview}
+    \begin{figure}    
+        \includegraphics[width=.75\textwidth]{./images/branch_architecture.png}
+        \caption{Branches Overview, Source \href{https://www.gliffy.com/blog/gitflow-diagrams}{gliffy.com}} 
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{git commands}
+        \begin{enumerate}
+            \item git init: Initialize a new Git repository.
+            \item git clone: Clone an existing Git repository from a remote source.
+            \item git add: Add files to the staging area to prepare them for commit.
+            \item git commit: Commit changes to the repository.
+            \item git push: Push changes to a remote repository.
+            \item git pull: Fetch and merge changes from a remote repository.
+        \end{enumerate}
+    \end{content}
+\end{frame}
+
+\begin{frame}
+    \begin{content}{git commands}
+        \begin{enumerate}
+            \item git branch: Manage branches in a Git repository.
+            \item git checkout: Switch between branches or restore files to a specific version.
+            \item git merge: Merge one or more branches into the current branch.
+            \item git status: Show the status of files in the working directory and the staging area.
+            \item git log: Show a history of commits.
+            \item git diff: Show changes between commits, branches, and more.
+        \end{enumerate}
+    \end{content}
+\end{frame}
+\begin{frame}
+    \begin{figure}    
+        \includegraphics[width=.75\textwidth]{./images/examplecommit.png}
+        \caption{Example Commit, Source Chatgpt} 
+    \end{figure}
+    \begin{content}{commit messages}
+        \begin{enumerate}
+            \item Separate the Subject from the Body
+            \item Keep the Subject Line Short: Use imperative verbs (e.g., Add, Fix, Update) in the subject line to describe what the commit does.
+            \item Use the Body to Provide Context
+        \end{enumerate}
+    \end{content}
+\end{frame}
+\begin{frame}
+    \begin{content}{commit messages}
+        \begin{enumerate}
+            \item Reference Relevant Issues or Tickets (e.g. \#1234, where 1234 is ticket number)
+            \item Avoid Committing Unrelated Changes Together!!!
+        \end{enumerate}
+    \end{content}
+    \begin{content}{List of imperative verbs}
+        Addition, Update, Fix, Refactor, Documentation, Fix, Test, Style, Merge, Revert
+    \end{content}
+\end{frame}
