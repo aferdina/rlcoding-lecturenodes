@@ -1,10 +1,10 @@
 \section{Testing}
+\subsection{Code coverage}
 \begin{frame}
     \begin{content}{Components of testing}
         \begin{itemize}
             \item Code coverage
-            \item Code quality
-            \item Code style
+            \item Code quality/Code style
         \end{itemize}
     \end{content}
 \end{frame}
@@ -14,7 +14,27 @@
     \end{content}
 \end{frame}
 \begin{frame}
+    \begin{figure}    
+        \includegraphics[width=.65\textwidth]{./images/codecoverage.png}
+        \caption{Code Coverage \href{https://gitlab.com/aferdina/MultiArmedBandits}{multiarmedbandits}, 26.09.23} 
+    \end{figure}
+\end{frame}
+\begin{frame}
     \begin{content}{Unit Tests}
         A unit test is a type of software testing where individual units or components of a software application are tested in isolation from the rest of the system to ensure that they function correctly. The term `unit' in unit testing refers to the smallest testable part of a software program, typically a function, method, or class. The primary purpose of unit testing is to validate that each unit of code behaves as expected and produces the correct output for a given set of inputs.
+    \end{content}
+\end{frame}
+\subsection{Code quality}
+\begin{frame}
+    \begin{content}{Code quality/ Code style}
+        \begin{itemize}
+            \item Consistent Code Style: PEP 8
+            \item Linting (pylint, flake8): Automatically check codestyle 
+            \item Code Formatting (autopep8, black): Automatically format code
+            \item Meaningful Variable and Function Names
+            \item Comments and Documentation
+            \item Avoid Magic Numbers and Strings
+            \item Avoid Long Functions and Classes
+        \end{itemize}
     \end{content}
 \end{frame}
