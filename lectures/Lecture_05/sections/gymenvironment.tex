@@ -1,0 +1,41 @@
+\section{Gym Environment}
+\begin{frame}
+    \begin{ldef}{Markov Decision Model}
+        A Markov decision model is a tuple $(S,A,R,p)$ consisting of the following ingredients: 
+        \begin{enumerate}
+            \item The measurable space $(S,\mathcal{S})$ is called the state space.
+            \item The measurable space $(A_s,\mathcal{A}_s),s\in S$ is called the action space of state $s\in S$.
+            \item The entire action space is defined to be $A = \bigcup\limits_{s \in S}A_s$. The corresponding $\sigma$-Algebra is given by $\mathcal{A} = \sigma(\bigcup\limits_{s\in S}\mathcal{A}_s)$.
+            \item A measurable set $R \subseteq \mathbb{R}$ of rewards with $0 \in R$, it's restricted Borel-$\sigma$-algebra denoted by $\mathcal{R}$.
+        \end{enumerate}
+    \end{ldef}
+\end{frame}
+\begin{frame}
+    \begin{ldef}{Markov Decision Model}
+        \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item A function \[p: \mathcal{S} \otimes  \mathcal{R}\times R \times (S \times A)\to [0,1],\, (B,(s,a)) \mapsto p(B\,;\, s,a)\] is called transition/reward-function if $p$ is a Markov kernel on $ \mathcal{S} \otimes \mathcal{R} \times (S \times A)$.
+        \end{enumerate}
+        A Markov decision model is called discrete if $S, A, R$ are finite or countably infinite and the $\sigma$-algebras are chosen to be the corresponding power sets.		
+    \end{ldef}
+\end{frame}
+\begin{frame}
+    \begin{content}{Gym Library}
+        The gym.Env class defines a standard interface for RL environments. This interface includes methods and attributes that any Gym-compatible RL environment must implement, making it easier to work with and compare different environments. The gym.Env class defines the following methods:
+        \begin{itemize}
+            \item \textbf{reset():} This method initializes or resets the environment to its initial state and returns the initial observation.
+            \item \textbf{step(action):} This method takes an action as input, applies the action to the environment, and returns information about the resulting state transition, including the next observation, reward, whether the episode is done (terminal state), and additional information.
+            \item \textbf{render():} This method is optional and allows you to visualize the environment, typically for debugging or monitoring purposes.
+        \end{itemize}
+    \end{content}
+\end{frame}
+\begin{frame}
+    \begin{content}{Gym Library}
+        The main attributes of a gym class are:
+        \begin{itemize}
+            \item \textbf{action\_space:} This attribute is an instance of the gym.spaces class and represents the set of actions that can be taken in the environment. The action space can be discrete, continuous, or a more complex data structure.
+            \item \textbf{observation\_space:} This attribute defines the observation space, specifying the dimensionality and possible values of observations.
+            \item \textbf{reward\_range:} This attribute specifies the minimum and maximum possible rewards that can be received in the environment.
+        \end{itemize}
+    \end{content}
+\end{frame}
