@@ -1,0 +1,35 @@
+\documentclass[10pt, aspectratio=169, hyperref={colorlinks = true,linkcolor = blue}]{beamer}
+
+%%% PAKETE
+
+\usepackage{../macros/lecture}
+
+%% custom commands
+
+\usetheme[block = fill,progressbar=frametitle]{metropolis}
+\setbeamercolor{normal text}{fg=UMblue}
+\setbeamercolor{example text}{fg=Purple}
+
+\makeatletter
+\patchcmd{\beamer@continueautobreak}{\frametitle}{\beamer@gobbleoptional}{}{\errmessage{failed to patch}}
+\patchcmd{\beamer@continueautobreak}{\framesubtitle}{\beamer@gobbleoptional}{}{\errmessage{failed to patch}}
+\makeatother
+
+\allowdisplaybreaks[1]
+% Durchnummerierung der Saetze, Definitionen usw.
+\setbeamertemplate{theorems}[normal font]
+
+
+\title{Reinforcement Learning- Coding Session 1}
+\subtitle{Leif D\"oring, Andr\'e Ferdinand (Uni Mannheim)}
+\date{27.09.2023}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\makeatother
+	\input{./sections/samplequestions.tex}
+	
+	\input 
+\end{document}
+
