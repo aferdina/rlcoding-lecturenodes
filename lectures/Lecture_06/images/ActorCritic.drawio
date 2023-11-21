@@ -1,0 +1,40 @@
+<mxfile host="Electron" modified="2023-11-21T11:20:11.923Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="v5o8gzMsHWDzJcelT0w-" version="22.0.3" type="device">
+  <diagram name="Seite-1" id="wMpzAMeSgPo_IlxKWy4J">
+    <mxGraphModel dx="1659" dy="971" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9IkyggHtCblAOZ6bn05r-1" value="ActorCriticPolicy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="80" width="230" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="9IkyggHtCblAOZ6bn05r-2" value="+ observation_space: space.Spaces&lt;br&gt;+ action_space: space.Spaces&lt;br&gt;+ net_arch: Dict[str, List[int]]&lt;br&gt;+ activation_fn: nn.Module&lt;br&gt;+ feature_extractor_class: BaseFeatureExtractorClass&lt;br&gt;+ mlp_extractor: MlpExtractor" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9IkyggHtCblAOZ6bn05r-1">
+          <mxGeometry y="26" width="230" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="9IkyggHtCblAOZ6bn05r-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="9IkyggHtCblAOZ6bn05r-1">
+          <mxGeometry y="180" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="9IkyggHtCblAOZ6bn05r-4" value="+ forward(obs: th.Tensor): Tuple[th.Tensor, th.Tensor, th.Tensor]&lt;br&gt;+ extract_features(obs: th.Tensor): Tuple[th.Tensor, th.Tensor]&lt;br&gt;+ evaulate_actions(obs: th.Tensor, actions: th.Tensor): Tuple[th.Tensor, th.Tensor, th.Tensor]&lt;br&gt;+ get_distrubution(obs: th.Tensor): Distrubution&lt;br&gt;+ predict_values(obs: th.Tensor): th.Tensor&lt;br&gt;&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9IkyggHtCblAOZ6bn05r-1">
+          <mxGeometry y="188" width="230" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="9IkyggHtCblAOZ6bn05r-5" value="MlpExtractor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="80" width="230" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="9IkyggHtCblAOZ6bn05r-6" value="+ policy_net: List[nn.Module]&lt;br&gt;+ value_net: List[nn.Module]&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9IkyggHtCblAOZ6bn05r-5">
+          <mxGeometry y="26" width="230" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="9IkyggHtCblAOZ6bn05r-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="9IkyggHtCblAOZ6bn05r-5">
+          <mxGeometry y="70" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="9IkyggHtCblAOZ6bn05r-8" value="+ forward_action(features: th.Tensor): th.Tensor&lt;br&gt;+ forward_critic(features: th.Tensor): th.Tensor&lt;br&gt;+ forward(features: th.Tensor): Tuple[th.Tensor, th.Tensor]&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9IkyggHtCblAOZ6bn05r-5">
+          <mxGeometry y="78" width="230" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="9IkyggHtCblAOZ6bn05r-10" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9IkyggHtCblAOZ6bn05r-4" target="9IkyggHtCblAOZ6bn05r-6">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="430" y="320" as="sourcePoint" />
+            <mxPoint x="590" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
