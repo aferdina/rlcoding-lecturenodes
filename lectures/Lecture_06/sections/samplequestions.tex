@@ -40,8 +40,16 @@
 \end{frame}
 \begin{frame}
     \textbf{Answer:}
-    \begin{enumerate}
+    \begin{enumerate}[2.]
         \item \textbf{MLP Extractor:} In the context of Stable Baselines, an MLP extractor refers to a type of neural network architecture used for feature extraction in policy networks. Stable Baselines3 provides different types of policy networks, including those for images (CnnPolicies), various input features (MlpPolicies), and multiple inputs (MultiInputPolicies). For a 1D observation space, a fully connected network with multiple layers is used, where the number of units per layer varies depending on the algorithm used. The result are neural net models of the form
+        \[pi_{\text{fully con}}: \mathbb{R}^{n_{pi \text{features}}} \rightarrow \mathbb{R}^{n_{pi \text{latent dim}}},\] and
+        \[vi_{\text{fully con}}: \mathbb{R}^{n_{vi \text{features}}} \rightarrow \mathbb{R}^{n_{vi \text{latent dim}}}\]
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+    \textbf{Answer:}
+    \begin{enumerate}[3.]
+        \item \textbf{Value Action mapping:} In the context of Stable Baselines, an MLP extractor refers to a type of neural network architecture used for feature extraction in policy networks. Stable Baselines3 provides different types of policy networks, including those for images (CnnPolicies), various input features (MlpPolicies), and multiple inputs (MultiInputPolicies). For a 1D observation space, a fully connected network with multiple layers is used, where the number of units per layer varies depending on the algorithm used. The result are neural net models of the form
         \[pi_{\text{fully con}}: \mathbb{R}^{n_{pi \text{features}}} \rightarrow \mathbb{R}^{n_{pi \text{latent dim}}},\] and
         \[vi_{\text{fully con}}: \mathbb{R}^{n_{vi \text{features}}} \rightarrow \mathbb{R}^{n_{vi \text{latent dim}}}\]
     \end{enumerate}
