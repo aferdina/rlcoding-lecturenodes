@@ -10,6 +10,7 @@
     \vspace{20pt}
 
     \textbf{Answer:} A \href{https://stable-baselines3.readthedocs.io/en/master/guide/callbacks.html}{callback} is a set of functions that will be called at given stages of the training procedure. You can use callbacks to access internal state of the RL model during training. It allows one to do monitoring, auto saving, model manipulation, progress bars, etc.
+    lectures/Lecture\_06/images/Callback.drawio
 
 \end{frame}
 
@@ -21,7 +22,7 @@
 
     \vspace{20pt}
 
-    \textbf{Answer:} [Insert answer or grading criteria]
+    \textbf{Answer:} lectures/Lecture\_06/images/ActorCritic.drawio
 \end{frame}
 
 \begin{frame}{Question 3}
@@ -39,7 +40,7 @@
     \end{enumerate}
 \end{frame}
 \begin{frame}
-    \textbf{Answer:}
+    \textbf{Answer:} lectures/Lecture\_06/images/CreateNeuralNetwork.drawio
     \begin{enumerate}[2.]
         \item \textbf{MLP Extractor:} In the context of Stable Baselines, an MLP extractor refers to a type of neural network architecture used for feature extraction in policy networks. Stable Baselines3 provides different types of policy networks, including those for images (CnnPolicies), various input features (MlpPolicies), and multiple inputs (MultiInputPolicies). For a 1D observation space, a fully connected network with multiple layers is used, where the number of units per layer varies depending on the algorithm used. The result are neural net models of the form
         \[pi_{\text{fully con}}: \mathbb{R}^{n_{pi \text{features}}} \rightarrow \mathbb{R}^{n_{pi \text{latent dim}}},\] and
@@ -49,9 +50,9 @@
 \begin{frame}
     \textbf{Answer:}
     \begin{enumerate}[3.]
-        \item \textbf{Value Action mapping:} In the context of Stable Baselines, an MLP extractor refers to a type of neural network architecture used for feature extraction in policy networks. Stable Baselines3 provides different types of policy networks, including those for images (CnnPolicies), various input features (MlpPolicies), and multiple inputs (MultiInputPolicies). For a 1D observation space, a fully connected network with multiple layers is used, where the number of units per layer varies depending on the algorithm used. The result are neural net models of the form
-        \[pi_{\text{fully con}}: \mathbb{R}^{n_{pi \text{features}}} \rightarrow \mathbb{R}^{n_{pi \text{latent dim}}},\] and
-        \[vi_{\text{fully con}}: \mathbb{R}^{n_{vi \text{features}}} \rightarrow \mathbb{R}^{n_{vi \text{latent dim}}}\]
+        \item \textbf{Value Action mapping:} The value function returns a real number. An additional layer is therefore required to map the latent space to a real number. For the action it is a bit more complicated. There the latent space is mapped to a distrubution over the action space. This is for example done by a normal distribution with mean $\mu$ and standard deviation $\sigma$ or a softmax function. The result are neural net models of the form
+        \[pi_{\text{action}}: \mathbb{R}^{n_{pi \text{latent dim}}} \rightarrow \mathbb{R}^{n_{\text{action}}},\] and
+        \[vi_{\text{value}}: \mathbb{R}^{n_{vi \text{latent dim}}} \rightarrow \mathbb{R}.\]
     \end{enumerate}
 \end{frame}
 
@@ -63,7 +64,7 @@
 
     \vspace{20pt}
 
-    \textbf{Answer:} [Insert answer or grading criteria]
+    \textbf{Answer:} TensorBoard is a visualization tool commonly used in machine learning to monitor and visualize the training process of deep learning models, including reinforcement learning models. Stable Baselines is a popular library for reinforcement learning in Python, and it provides built-in support for integrating TensorBoard to track and visualize the training progress of your reinforcement learning agents. In Stable Baselines, you can use the TensorboardCallback class to set up TensorBoard logging during training. The TensorboardCallback allows you to customize what information is logged to TensorBoard by specifying the relevant arguments when creating an instance of the callback. For example, you can set log frequency to control how often the logs are updated or use verbose to control the verbosity level of the logs.
 \end{frame}
 
 \begin{frame}{Question 6}
@@ -74,7 +75,17 @@
 
     \vspace{20pt}
 
-    \textbf{Answer:} [Insert answer or grading criteria]
+    \textbf{Answer:} 
+    \begin{enumerate}
+        \item \textbf{Model Parameters (Neural Network Weights) for the Policy:} The model parameters of the neural network represent the weights and biases that define the policy function. These parameters are learned and updated during the training process to improve the policy's performance.
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+    \textbf{Answer:}
+    \begin{enumerate}[2.]
+        \item \textbf{Normalization Parameters for the Environment (Observation Scaling and Shifting):} The normalization parameters for the environment are used to scale and shift the observations to a range that is suitable for the neural network. This is done to improve the performance of the neural network.
+        \item \textbf{TensorBoard Log File:} The TensorBoard log file is a record of training data and metrics that are used to visualize the training process in TensorBoard. It contains information such as training loss, rewards, policy updates, and other relevant statistics.
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{Question 7}
@@ -84,10 +95,18 @@
     Name 5 components that are needed to model the game GridWorld from the lecture. Also describe the implementation of the individual components.  
     \vspace{20pt}
 
-    \textbf{Answer:} [Insert answer or grading criteria]
+    \textbf{Answer:} 
+    \begin{enumerate}
+        \item Action space
+        \item Observation space
+        \item Reward function
+        \item Transition function
+        \item Initial state distribution
+    \end{enumerate}
+    See lecture slides and code for implementation details.
 \end{frame}
 
-\begin{frame}{Question 9}
+\begin{frame}{Question 8}
     \textbf{Topic:} Implementing Multiarmed Bandit Environments
     \vspace{10pt}
 
@@ -97,7 +116,7 @@
     \textbf{Answer:} [Insert answer or grading criteria]
 \end{frame}
 
-\begin{frame}{Question 10}
+\begin{frame}{Question 9}
     \textbf{Topic:} Implementing Reinforcment Learning Models
     \vspace{10pt}
 
@@ -107,7 +126,7 @@
     \textbf{Answer:} [Insert answer or grading criteria]
 \end{frame}
 
-\begin{frame}{Question 11}
+\begin{frame}{Question 10}
     \textbf{Topic:} Updating Neural Networks
     \vspace{10pt}
 
@@ -117,7 +136,7 @@
     \textbf{Answer:} [Insert answer or grading criteria]
 \end{frame}
 
-\begin{frame}{Question 12}
+\begin{frame}{Question 11}
     \textbf{Topic:} UML Class Diagram: Reinforcement Learning Algorithm
     \vspace{10pt}
 
@@ -127,7 +146,7 @@
     \textbf{Answer:} [Insert answer or grading criteria]
 \end{frame}
 
-\begin{frame}{Question 3}
+\begin{frame}{Question 12}
     \textbf{Topic:} UML Class Diagram: Autonomous Driving
     \vspace{10pt}
 
