@@ -10,6 +10,7 @@
     \vspace{20pt}
 
     \textbf{Answer:} A \href{https://stable-baselines3.readthedocs.io/en/master/guide/callbacks.html}{callback} is a set of functions that will be called at given stages of the training procedure. You can use callbacks to access internal state of the RL model during training. It allows one to do monitoring, auto saving, model manipulation, progress bars, etc.
+
 \end{frame}
 
 \begin{frame}{Question 2}
@@ -28,10 +29,22 @@
     \vspace{10pt}
 
     Show schematically how the implementation of neural networks works in the context of the game environment in reinforcement learning. Name two additional parameters that can/must be defined for the creation of a neural network. 
-
-    \vspace{20pt}
-
-    \textbf{Answer:} [Insert answer or grading criteria]
+\end{frame}
+\begin{frame}
+    \textbf{Answer:}
+    \begin{enumerate}
+        \item \textbf{Feature extrator for policy and value function:} The information about the observation space dimension is used to create a feature extractor for the policy and value function. Furthermore the type of feature extractor for the observation can be chosen (e.g flatten, convolutional, mlp, lstm, \dots). The result are neural net models of the form
+        \[pi_{\text{feature}}: \mathbb{R}^{n_{\text{observation}}} \rightarrow \mathbb{R}^{n_{pi\text{features}}},\] and
+        \[vi_{\text{feature}}: \mathbb{R}^{n_{\text{observation}}} \rightarrow \mathbb{R}^{n_{vi\text{features}}}\]
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+    \textbf{Answer:}
+    \begin{enumerate}
+        \item \textbf{MLP Extractor:} In the context of Stable Baselines, an MLP extractor refers to a type of neural network architecture used for feature extraction in policy networks. Stable Baselines3 provides different types of policy networks, including those for images (CnnPolicies), various input features (MlpPolicies), and multiple inputs (MultiInputPolicies). For a 1D observation space, a fully connected network with multiple layers is used, where the number of units per layer varies depending on the algorithm used. The result are neural net models of the form
+        \[pi_{\text{fully con}}: \mathbb{R}^{n_{pi \text{features}}} \rightarrow \mathbb{R}^{n_{pi \text{latent dim}}},\] and
+        \[vi_{\text{fully con}}: \mathbb{R}^{n_{vi \text{features}}} \rightarrow \mathbb{R}^{n_{vi \text{latent dim}}}\]
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{Question 4}
