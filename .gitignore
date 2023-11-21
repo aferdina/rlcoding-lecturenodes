@@ -34,3 +34,4 @@ Thumbs.db
 
 # ingore backup files from draw io
 *.drawio.bkp
+*.dtmp
