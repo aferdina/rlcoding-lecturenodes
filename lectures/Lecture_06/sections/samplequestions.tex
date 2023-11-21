@@ -153,7 +153,7 @@
     Create a UML class diagram for the game environment of the gym environment from the lecture.
     \vspace{20pt}
 
-    \textbf{Answer:} [Insert answer or grading criteria]
+    \textbf{Answer:} lectures/Lecture\_06/images/PorscheAiClassDiagram.drawio
 \end{frame}
 
 \begin{frame}{Question 13}
@@ -173,7 +173,28 @@
     What is the Pygame package used for in the context of reinforcement learning and describe two features of the package. 
     \vspace{20pt}
 
-    \textbf{Answer:} [Insert answer or grading criteria]
+    \textbf{Answer:}
+    Pygame is a popular Python library that is primarily used for developing 2D video games and multimedia applications. It provides a simple and intuitive interface for handling graphics, user input, sound, and more. While pygame itself is not specifically designed for reinforcement learning (RL), it can be used in the context of RL for various purposes:
+\end{frame}
+\begin{frame}
+    \begin{enumerate}
+        \item Pygame can be used to create custom environments for reinforcement learning experiments. You can design 2D game environments with pygame where agents interact with the game world and learn to make decisions through RL algorithms. These custom environments can serve as testbeds for RL research and experimentation.
+        \item Pygame can be used to simulate and visualize RL scenarios. You can use it to render and animate the agent's actions and the environment's dynamics. This visualization can be helpful for debugging RL algorithms and understanding the agent's behavior during training.
+    \end{enumerate}
+    
+\end{frame}
+\begin{frame}
+    In Pygame, sprites are a fundamental concept used for creating and managing 2D graphical objects within a game or graphical application. Sprites are typically used to represent characters, objects, or other entities in the game world. They simplify the process of drawing and updating these objects on the screen.
+
+Here are some key characteristics and concepts related to sprites in Pygame:
+
+Sprite Groups: Sprites are often organized into groups, which can be helpful for managing and manipulating multiple sprites at once. Pygame's pygame.sprite.Group class allows you to create and manage groups of sprites efficiently. You can add, remove, update, and draw all sprites in a group with a single method call.
+Each sprite has a position, usually represented as an (x, y) coordinate on the screen. Pygame provides the pygame.Rect class, which is commonly used to represent the bounding rectangle of a sprite. This rectangle defines the sprite's position and size and is useful for collision detection and other operations.
+\end{frame}
+\begin{frame}
+    In a game loop, you typically update the state of each sprite (e.g., move, animate) and then render (draw) them on the screen. Pygame provides methods like blit to draw sprites onto the display surface. You can also use sprite groups to update and draw all sprites in a group efficiently.
+    Pygame offers tools for collision detection between sprites. You can check if two sprites intersect by comparing their Rect objects. This is essential for handling interactions and collisions between game objects.
+    Sprites are often used for animations. You can create animations by displaying different images (frames) in sequence to create the illusion of motion. Pygame provides functions and classes for handling sprite animations.
 \end{frame}
 
 \begin{frame}{Question 15}
@@ -183,7 +204,7 @@
     Create a class diagram for the implementation of tabular methods from the lecture. What is the structure of the underlying decision rule? 
     \vspace{20pt}
 
-    \textbf{Answer:} [Insert answer or grading criteria]
+    \textbf{Answer:} lectures/Lecture\_06/images/FiniteClasses.drawio
 \end{frame}
 
 \begin{frame}{Question 16-20}
